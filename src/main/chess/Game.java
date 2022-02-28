@@ -52,7 +52,7 @@ public class Game {
 							}
 						}
 					}
-					if (gameEnd==true){
+					if (gameEnd){
 						System.out.println("Game ended");
 						break;
 					}
@@ -93,8 +93,7 @@ public class Game {
 	}
 
 	private static int getI(char row){
-		int i=Character.getNumericValue(row);
-		return i;
+		return Character.getNumericValue(row);
 	}
 
 	private static int getJ(char cal){
@@ -118,7 +117,7 @@ public class Game {
 		return j;
 	}
 
-	public static void main (String args[]){
+	public static void main (String[] args){
 		Board.initialiseBoard();
 		Board.initialisePieces();
 		Board.printBoard();

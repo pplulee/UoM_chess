@@ -23,6 +23,8 @@ class King extends Piece{
 
 	@Override
 	boolean isLegitMove(int i0, int j0, int i1, int j1) {
-		return true;
+		if ((Board.hasPiece(i1,j1))){
+			return false;
+		}else return ((j1 == (j0 + 1)) || (j1 == (j0 - 1))) ^ ((i1 == (i0 + 1)) || (i1 == (i0 - 1)));
 	}
 }
