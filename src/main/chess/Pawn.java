@@ -45,24 +45,24 @@ public class Pawn extends Piece{
 				return false;
 			}else{
 				switch (Math.abs(i0 - i1)){
-					case 1 ->{
+					case 1:{
 						return true;
 					}
-					case 2 ->{
+					case 2:{
 						return !Board.hasPiece(i0+direction,j0);
 					}
 				}
 			}
 		}else{
 			switch (Math.abs(j0 - j1)){
-				case 0->{
+				case 0:{
 					if (Math.abs(i0-i1)==2){
 						return false;
 					}else{
 						return !Board.hasPiece(i0+direction,j0);
 					}
 				}
-				case 1->{
+				case 1:{
 					return Board.hasPiece(i1, j1) && Board.getPiece(i0, j0).getColour() != Board.getPiece(i1, j1).getColour();
 				}
 			}
